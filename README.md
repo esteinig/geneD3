@@ -48,8 +48,7 @@ source $HOME/.bashrc
 #### Basics
 
 ```
---files           Comma-delimited list of annotation and sequence files, currently only 
-                  formatted as complete GenBank
+--files           Comma-delimited list of annotation and sequence files, complete GenBank
 --names           Comma-delimited list of unique names for each sequence
 --features        Comma-delimited list of features to parse from annotation (CDS)
 --qualifiers      Comma-delimited list of qualifiers to parse from annotations (gene,product)
