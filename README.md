@@ -117,6 +117,9 @@ source $HOME/.bashrc
 ---
 
 In the next version:
+* tests
+* code annotations
+* pip install on PyPI
 * alignment of segments on canvas
 * comparison opacity scaled by identity
 * additional annotation and sequence formats
