@@ -117,11 +117,11 @@ source $HOME/.bashrc
 ---
 
 In the next version:
-* tests
-* code annotations
 * pip install on PyPI
+* tests and annotations
+* download accessions from NCBI
+* forward / reverse marker style
 * alignment of segments on canvas
 * comparison opacity scaled by identity
 * additional annotation and sequence formats
-* download accessions from NCBI
-* support for prokaryotic sequence annotation with [Prokka](https://github.com/tseemann/prokka)
+
