@@ -2,7 +2,7 @@
 
 [![Click for interactive visualization with GeneD3](https://github.com/esteinig/geneD3/blob/master/title_image.png)](http://htmlpreview.github.io/?https://github.com/esteinig/geneD3/master/title_image.html)
 
-Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
+Interactive sequence comparisons in [D3](https://github.com/d3)
 
 Click the image above to see an interactive example of GeneD3:
 * zoom and drag
