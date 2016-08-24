@@ -19,7 +19,7 @@ Click the image above to see an interactive example of GeneD3:
 
 The program outputs the visualization as HTML, which can be opened in Chrome or Firefox.
 
-[SVG Crowbar](http://nytimes.github.io/svg-crowbar/) can download the visualizatio as a static vector file - works in both Chrome and Firefox!
+[SVG Crowbar](http://nytimes.github.io/svg-crowbar/) can download the visualization as a static vector file, works in both Chrome and Firefox.
 
 ### Dependencies
 ---
@@ -129,5 +129,5 @@ In the next version:
 * forward / reverse marker style
 * alignment of segments on canvas
 * additional annotation and sequence formats
-* 
+* polygon opacity or colour scaled by identity
 
