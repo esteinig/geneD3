@@ -1,0 +1,1577 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+    .blockText {
+        fill: #6B6B6B;
+        font-size: 11px;
+        font-family: Courgette, sans-serif;
+    }
+
+    div.tooltip {
+        position: absolute;
+        text-align: left;
+        max-width: 300px;
+        padding: 11px;
+        font-size: 11px;
+        font-family: Courgette, sans-serif;
+        background: #FEFCFF;
+        border-radius: 11px;
+        pointer-events: none;
+    }
+
+    .title {
+        fill: #565051;
+        font-size: 14px;
+        font-family: Courgette, sans-serif;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+<script type="application/json" id="blocks">
+[
+    {
+        "Unnamed: 0": 0,
+        "colour": "red",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  0 - 480 Product:  rRNA large subunit methyltransferase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">0 - 480</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">rRNA large subunit methyltransferase </span><br>",
+        "width": 480,
+        "x": 500,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 1,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  801 - 2058 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">801 - 2058</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 1257,
+        "x": 1301,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 2,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  2472 - 2712 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2472 - 2712</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 240,
+        "x": 2972,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 3,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  2743 - 3418 Product:  transposase for IS431mec ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2743 - 3418</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase for IS431mec </span><br>",
+        "width": 675,
+        "x": 3243,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 4,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  3675 - 3843 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">3675 - 3843</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 168,
+        "x": 4175,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 5,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  4719 - 5463 Gene:  ugpQ_1  Product:  glycerophosphoryl diester phosphodiesterase, UgpQ_1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">4719 - 5463</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ugpQ_1 </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">glycerophosphoryl diester phosphodiesterase, UgpQ_1 </span><br>",
+        "width": 744,
+        "x": 5219,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 6,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  5559 - 5988 Gene:  maoC  Product:  MaoC domain protein dehydratase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">5559 - 5988</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">maoC </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">MaoC domain protein dehydratase </span><br>",
+        "width": 429,
+        "x": 6059,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 7,
+        "colour": "navy",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  6033 - 8040 Gene:  mecA  Product:  penicillin-binding protein 2 prime ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">6033 - 8040</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">penicillin-binding protein 2 prime </span><br>",
+        "width": 2007,
+        "x": 6533,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 8,
+        "colour": "navy",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  8139 - 9126 Gene:  mecR1  Product:  methicillin-resistance regulatory protein MecR1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">8139 - 9126</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecR1 </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">methicillin-resistance regulatory protein MecR1 </span><br>",
+        "width": 987,
+        "x": 8639,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 9,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  9348 - 10872 Product:  ISSau3 transposase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">9348 - 10872</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">ISSau3 transposase </span><br>",
+        "width": 1524,
+        "x": 9848,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 10,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  11007 - 11514 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">11007 - 11514</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 507,
+        "x": 11507,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 11,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  11528 - 11840 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">11528 - 11840</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 312,
+        "x": 12028,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 12,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  11926 - 12277 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">11926 - 12277</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 351,
+        "x": 12426,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 13,
+        "colour": "purple",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  12798 - 14427 Gene:  ccrB  Product:  cassette chromosome recombinase B ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">12798 - 14427</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrB </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase B </span><br>",
+        "width": 1629,
+        "x": 13298,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 14,
+        "colour": "purple",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  14448 - 15798 Gene:  ccrA  Product:  cassette chromosome recombinase A1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">14448 - 15798</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase A1 </span><br>",
+        "width": 1350,
+        "x": 14948,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 15,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  16031 - 17819 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">16031 - 17819</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 1788,
+        "x": 16531,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 16,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  17818 - 18109 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">17818 - 18109</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 291,
+        "x": 18318,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 17,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  18247 - 19297 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">18247 - 19297</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 1050,
+        "x": 18747,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 18,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  19914 - 21405 Product:  putative transcriptional regulator ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">19914 - 21405</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">putative transcriptional regulator </span><br>",
+        "width": 1491,
+        "x": 20414,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 19,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  21777 - 22092 Product:  rhodanese-domain protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">21777 - 22092</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">rhodanese-domain protein </span><br>",
+        "width": 315,
+        "x": 22277,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 20,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "JKD6159",
+        "note": "Location:  22028 - 23033 Product:  metallo-beta-lactamase family protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">22028 - 23033</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">metallo-beta-lactamase family protein </span><br>",
+        "width": 1005,
+        "x": 22528,
+        "y": 225
+    },
+    {
+        "Unnamed: 0": 0,
+        "colour": "red",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  0 - 480 Product:  rRNA large subunit methyltransferase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">0 - 480</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">rRNA large subunit methyltransferase </span><br>",
+        "width": 480,
+        "x": 500,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 1,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  762 - 2058 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">762 - 2058</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1296,
+        "x": 1262,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 2,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  2472 - 2712 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2472 - 2712</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 240,
+        "x": 2972,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 3,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  2743 - 3418 Product:  transposase for IS431mec ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2743 - 3418</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase for IS431mec </span><br>",
+        "width": 675,
+        "x": 3243,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 4,
+        "colour": "orange",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  3508 - 3706 Product:  Replication protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">3508 - 3706</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">Replication protein </span><br>",
+        "width": 198,
+        "x": 4008,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 5,
+        "colour": "orange",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  3718 - 4513 Product:  Replication protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">3718 - 4513</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">Replication protein </span><br>",
+        "width": 795,
+        "x": 4218,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 6,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  4665 - 4755 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">4665 - 4755</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 90,
+        "x": 5165,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 7,
+        "colour": "orange",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  4736 - 5999 Gene:  pre  Product:  plasmid recombination enzyme ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">4736 - 5999</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">pre </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">plasmid recombination enzyme </span><br>",
+        "width": 1263,
+        "x": 5236,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 8,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  6506 - 6905 Product:  bleomycin resistance protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">6506 - 6905</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">bleomycin resistance protein </span><br>",
+        "width": 399,
+        "x": 7006,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 9,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  7127 - 7898 Product:  kanamycin nucleotidyltransferase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">7127 - 7898</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">kanamycin nucleotidyltransferase </span><br>",
+        "width": 771,
+        "x": 7627,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 10,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  8038 - 8713 Product:  transposase for IS431mec ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">8038 - 8713</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase for IS431mec </span><br>",
+        "width": 675,
+        "x": 8538,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 11,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  8970 - 9138 Gene:  mvaS  Product:  3-hydroxy-3-methylglutaryl coenzyme A synthase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">8970 - 9138</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mvaS </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">3-hydroxy-3-methylglutaryl coenzyme A synthase </span><br>",
+        "width": 168,
+        "x": 9470,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 12,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  9235 - 9466 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">9235 - 9466</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 231,
+        "x": 9735,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 13,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  9974 - 10718 Gene:  ugpQ_1  Product:  glycerophosphoryl diester phosphodiesterase, UgpQ_1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">9974 - 10718</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ugpQ_1 </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">glycerophosphoryl diester phosphodiesterase, UgpQ_1 </span><br>",
+        "width": 744,
+        "x": 10474,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 14,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  10814 - 11243 Gene:  maoC  Product:  MaoC domain-containing protein dehydratase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">10814 - 11243</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">maoC </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">MaoC domain-containing protein dehydratase </span><br>",
+        "width": 429,
+        "x": 11314,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 15,
+        "colour": "navy",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  11288 - 13295 Gene:  mecA  Product:  penicillin-binding protein 2 prime ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">11288 - 13295</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">penicillin-binding protein 2 prime </span><br>",
+        "width": 2007,
+        "x": 11788,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 16,
+        "colour": "navy",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  13496 - 14381 Gene:  mecR1  Product:  methicillin-resistance regulatory protein MecR1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">13496 - 14381</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecR1 </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">methicillin-resistance regulatory protein MecR1 </span><br>",
+        "width": 885,
+        "x": 13996,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 17,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  14340 - 14613 Product:  type I site-specific deoxyribonuclease restriction subunit ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">14340 - 14613</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">type I site-specific deoxyribonuclease restriction subunit </span><br>",
+        "width": 273,
+        "x": 14840,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 18,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  14603 - 16124 Product:  ISSau3 transposase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">14603 - 16124</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">ISSau3 transposase </span><br>",
+        "width": 1521,
+        "x": 15103,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 19,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  16262 - 16772 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">16262 - 16772</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 510,
+        "x": 16762,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 20,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  16783 - 17095 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">16783 - 17095</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 312,
+        "x": 17283,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 21,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  17181 - 17532 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">17181 - 17532</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 351,
+        "x": 17681,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 22,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  17771 - 17948 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">17771 - 17948</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 177,
+        "x": 18271,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 23,
+        "colour": "purple",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  18053 - 19682 Gene:  ccrB  Product:  cassette chromosome recombinase B ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">18053 - 19682</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrB </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase B </span><br>",
+        "width": 1629,
+        "x": 18553,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 24,
+        "colour": "purple",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  19703 - 21071 Gene:  ccrA  Product:  cassette chromosome recombinase A1 ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">19703 - 21071</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase A1 </span><br>",
+        "width": 1368,
+        "x": 20203,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 25,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  21286 - 23074 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">21286 - 23074</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1788,
+        "x": 21786,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 26,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  23073 - 23364 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">23073 - 23364</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 291,
+        "x": 23573,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 27,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  23460 - 24552 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">23460 - 24552</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1092,
+        "x": 23960,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 28,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  24894 - 26385 Product:  putative transcriptional regulator ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">24894 - 26385</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">putative transcriptional regulator </span><br>",
+        "width": 1491,
+        "x": 25394,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 29,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "ST93",
+        "note": "Location:  27008 - 28013 Product:  metallo-beta-lactamase family protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">27008 - 28013</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">metallo-beta-lactamase family protein </span><br>",
+        "width": 1005,
+        "x": 27508,
+        "y": 525
+    },
+    {
+        "Unnamed: 0": 0,
+        "colour": "red",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  0 - 480 Product:  conserved hypothetical protein orfX ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">0 - 480</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein orfX </span><br>",
+        "width": 480,
+        "x": 500,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 1,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  762 - 2058 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">762 - 2058</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1296,
+        "x": 1262,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 2,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  2472 - 2712 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2472 - 2712</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 240,
+        "x": 2972,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 3,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  2743 - 3418 Gene:  tnp  Product:  transposase for IS-like element ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">2743 - 3418</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnp </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase for IS-like element </span><br>",
+        "width": 675,
+        "x": 3243,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 4,
+        "colour": "orange",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  3508 - 3715 Product:  truncated replication protein for plasmid ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">3508 - 3715</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">truncated replication protein for plasmid </span><br>",
+        "width": 207,
+        "x": 4008,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 5,
+        "colour": "orange",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  3718 - 4513 Product:  truncated replication protein for pUB110 plasmid ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">3718 - 4513</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">truncated replication protein for pUB110 plasmid </span><br>",
+        "width": 795,
+        "x": 4218,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 6,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  4537 - 4618 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">4537 - 4618</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 81,
+        "x": 5037,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 7,
+        "colour": "orange",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  4736 - 5999 Gene:  pre  Product:  plasmid recombination enzyme ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">4736 - 5999</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">pre </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">plasmid recombination enzyme </span><br>",
+        "width": 1263,
+        "x": 5236,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 8,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  6107 - 6248 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">6107 - 6248</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 141,
+        "x": 6607,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 9,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  6295 - 6487 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">6295 - 6487</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 192,
+        "x": 6795,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 10,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  6505 - 6910 Gene:  bleO  Product:  bleomycin resistance protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">6505 - 6910</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">bleO </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">bleomycin resistance protein </span><br>",
+        "width": 405,
+        "x": 7005,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 11,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  7126 - 7897 Gene:  aadD  Product:  kanamycin nucleotidyltransferase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">7126 - 7897</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">aadD </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">kanamycin nucleotidyltransferase </span><br>",
+        "width": 771,
+        "x": 7626,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 12,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  8314 - 8764 Gene:  tnp  Product:  transposase for IS-like element ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">8314 - 8764</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnp </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase for IS-like element </span><br>",
+        "width": 450,
+        "x": 8814,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 13,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  8847 - 9189 Product:  probable HMG-CoA synthase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">8847 - 9189</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">probable HMG-CoA synthase </span><br>",
+        "width": 342,
+        "x": 9347,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 14,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  9985 - 10729 Product:  glycerophosphoryl diester phosphodiesterase homolog ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">9985 - 10729</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">glycerophosphoryl diester phosphodiesterase homolog </span><br>",
+        "width": 744,
+        "x": 10485,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 15,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  10825 - 11254 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">10825 - 11254</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 429,
+        "x": 11325,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 16,
+        "colour": "navy",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  11299 - 13306 Gene:  mecA  Product:  penicillin binding protein 2 prime ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">11299 - 13306</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">penicillin binding protein 2 prime </span><br>",
+        "width": 2007,
+        "x": 11799,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 17,
+        "colour": "navy",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  13405 - 15163 Gene:  mecR1  Product:  methicillin resistance protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">13405 - 15163</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecR1 </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">methicillin resistance protein </span><br>",
+        "width": 1758,
+        "x": 13905,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 18,
+        "colour": "navy",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  15162 - 15534 Gene:  mecI  Product:  methicillin resistance regulatory protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">15162 - 15534</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">mecI </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">methicillin resistance regulatory protein </span><br>",
+        "width": 372,
+        "x": 15662,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 19,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  16020 - 17151 Gene:  xylR  Product:  xylose repressor homologue ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">16020 - 17151</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">xylR </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">xylose repressor homologue </span><br>",
+        "width": 1131,
+        "x": 16520,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 20,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  17264 - 17657 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">17264 - 17657</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 393,
+        "x": 17764,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 21,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  17660 - 18599 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">17660 - 18599</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 939,
+        "x": 18160,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 22,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  18631 - 19696 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">18631 - 19696</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 1065,
+        "x": 19131,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 23,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  19831 - 20092 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">19831 - 20092</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 261,
+        "x": 20331,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 24,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  20091 - 20736 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">20091 - 20736</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 645,
+        "x": 20591,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 25,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  21074 - 21743 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">21074 - 21743</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 669,
+        "x": 21574,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 26,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  22095 - 22269 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">22095 - 22269</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 174,
+        "x": 22595,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 27,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  22270 - 23002 Gene:  ermA  Product:  rRNA methylase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">22270 - 23002</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ermA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">rRNA methylase </span><br>",
+        "width": 732,
+        "x": 22770,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 28,
+        "colour": "dodgerblue",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  23127 - 23910 Gene:  ant(9)  Product:  O-nucleotidylltransferase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">23127 - 23910</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ant(9) </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">O-nucleotidylltransferase </span><br>",
+        "width": 783,
+        "x": 23627,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 29,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  24060 - 24438 Gene:  tnpC  Product:  transposase C ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">24060 - 24438</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnpC </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase C </span><br>",
+        "width": 378,
+        "x": 24560,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 30,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  24444 - 26337 Gene:  tnpB  Product:  transposase B ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">24444 - 26337</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnpB </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase B </span><br>",
+        "width": 1893,
+        "x": 24944,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 31,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  26333 - 27419 Gene:  tnpA  Product:  transposase A ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">26333 - 27419</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnpA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase A </span><br>",
+        "width": 1086,
+        "x": 26833,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 32,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  27537 - 27855 Product:  truncated hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">27537 - 27855</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">truncated hypothetical protein </span><br>",
+        "width": 318,
+        "x": 28037,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 33,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  27875 - 28394 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">27875 - 28394</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 519,
+        "x": 28375,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 34,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  28399 - 28711 Product:  conserved hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">28399 - 28711</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">conserved hypothetical protein </span><br>",
+        "width": 312,
+        "x": 28899,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 35,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  28797 - 29148 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">28797 - 29148</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 351,
+        "x": 29297,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 36,
+        "colour": "purple",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  29665 - 31294 Gene:  ccrB  Product:  cassette chromosome recombinase B ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">29665 - 31294</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrB </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase B </span><br>",
+        "width": 1629,
+        "x": 30165,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 37,
+        "colour": "purple",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  31315 - 32665 Gene:  ccrA  Product:  cassette chromosome recombinase A ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">31315 - 32665</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">ccrA </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">cassette chromosome recombinase A </span><br>",
+        "width": 1350,
+        "x": 31815,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 38,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  32898 - 34692 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">32898 - 34692</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1794,
+        "x": 33398,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 39,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  34691 - 34988 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">34691 - 34988</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 297,
+        "x": 35191,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 40,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  35180 - 36227 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">35180 - 36227</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 1047,
+        "x": 35680,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 41,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  36477 - 36855 Gene:  tnp  Product:  transposase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">36477 - 36855</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnp </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase </span><br>",
+        "width": 378,
+        "x": 36977,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 42,
+        "colour": "darkgreen",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  36966 - 37320 Gene:  tnp  Product:  transposase ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">36966 - 37320</span><br><strong><span style=\"color:#565051\">Gene: </span></strong><span style=\"color:#565051\">tnp </span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">transposase </span><br>",
+        "width": 354,
+        "x": 37466,
+        "y": 825
+    },
+    {
+        "Unnamed: 0": 43,
+        "colour": "darkgray",
+        "height": 50,
+        "name": "Mu3",
+        "note": "Location:  37304 - >37320 Product:  hypothetical protein ",
+        "text": "<strong><span style=\"color:#565051\">Location: </span></strong><span style=\"color:#565051\">37304 - >37320</span><br><strong><span style=\"color:#565051\">Product: </span></strong><span style=\"color:#565051\">hypothetical protein </span><br>",
+        "width": 16,
+        "x": 37804,
+        "y": 825
+    }
+]
+</script>
+<script type="application/json" id="lines">
+[
+    {
+        "colour": "gray",
+        "length": 23533.0,
+        "width": 5,
+        "x1": 500.0,
+        "x2": 23533.0,
+        "y1": 250.0,
+        "y2": 250.0
+    },
+    {
+        "colour": "gray",
+        "length": 28519.0,
+        "width": 5,
+        "x1": 500.0,
+        "x2": 28519.0,
+        "y1": 550.0,
+        "y2": 550.0
+    },
+    {
+        "colour": "gray",
+        "length": 37820.0,
+        "width": 5,
+        "x1": 500.0,
+        "x2": 37820.0,
+        "y1": 850.0,
+        "y2": 850.0
+    }
+]
+</script>
+<script type="application/json" id="chords">
+[
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 4640.0,
+                "y": 285.0
+            },
+            {
+                "x": 20075.0,
+                "y": 285.0
+            },
+            {
+                "x": 25330.0,
+                "y": 515.0
+            },
+            {
+                "x": 9895.0,
+                "y": 515.0
+            },
+            {
+                "x": 4640.0,
+                "y": 285.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">JKD6159.fa (4140 - 19575)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">ST93.fa (9395 - 24830)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">15441 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">99.61 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 501.0,
+                "y": 285.0
+            },
+            {
+                "x": 3974.0,
+                "y": 285.0
+            },
+            {
+                "x": 3974.0,
+                "y": 515.0
+            },
+            {
+                "x": 501.0,
+                "y": 515.0
+            },
+            {
+                "x": 501.0,
+                "y": 285.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">JKD6159.fa (1 - 3474)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">ST93.fa (1 - 3474)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">3474 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">100.0 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 20171.0,
+                "y": 285.0
+            },
+            {
+                "x": 23533.0,
+                "y": 285.0
+            },
+            {
+                "x": 28513.0,
+                "y": 515.0
+            },
+            {
+                "x": 25151.0,
+                "y": 515.0
+            },
+            {
+                "x": 20171.0,
+                "y": 285.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">JKD6159.fa (19671 - 23033)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">ST93.fa (24651 - 28013)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">3363 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">99.94 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 3185.0,
+                "y": 285.0
+            },
+            {
+                "x": 4969.0,
+                "y": 285.0
+            },
+            {
+                "x": 10264.0,
+                "y": 515.0
+            },
+            {
+                "x": 8480.0,
+                "y": 515.0
+            },
+            {
+                "x": 3185.0,
+                "y": 285.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">JKD6159.fa (2685 - 4469)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">ST93.fa (7980 - 9764)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">1785 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">98.43 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 501.0,
+                "y": 585.0
+            },
+            {
+                "x": 8479.0,
+                "y": 585.0
+            },
+            {
+                "x": 8478.0,
+                "y": 815.0
+            },
+            {
+                "x": 501.0,
+                "y": 815.0
+            },
+            {
+                "x": 501.0,
+                "y": 585.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">ST93.fa (1 - 7979)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">Mu3.fa (1 - 7978)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">7979 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">99.84 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 16748.0,
+                "y": 585.0
+            },
+            {
+                "x": 23384.0,
+                "y": 585.0
+            },
+            {
+                "x": 34999.0,
+                "y": 815.0
+            },
+            {
+                "x": 28361.0,
+                "y": 815.0
+            },
+            {
+                "x": 16748.0,
+                "y": 585.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">ST93.fa (16248 - 22884)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">Mu3.fa (27861 - 34499)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">6654 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">93.39 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 9935.0,
+                "y": 585.0
+            },
+            {
+                "x": 14869.0,
+                "y": 585.0
+            },
+            {
+                "x": 14880.0,
+                "y": 815.0
+            },
+            {
+                "x": 9946.0,
+                "y": 815.0
+            },
+            {
+                "x": 9935.0,
+                "y": 585.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">ST93.fa (9435 - 14369)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">Mu3.fa (9446 - 14380)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">4935 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">99.45 %</span><br>",
+        "width": 2
+    },
+    {
+        "colour": [
+            "polygon_line_colour"
+        ],
+        "fill": "gray",
+        "opacity": 0.8,
+        "poly": [
+            {
+                "x": 8480.0,
+                "y": 585.0
+            },
+            {
+                "x": 10224.0,
+                "y": 585.0
+            },
+            {
+                "x": 10275.0,
+                "y": 815.0
+            },
+            {
+                "x": 8531.0,
+                "y": 815.0
+            },
+            {
+                "x": 8480.0,
+                "y": 585.0
+            }
+        ],
+        "text": "<strong><span style=\"color:#565051\">Reference: </span></strong><span style=\"color:#565051\">ST93.fa (7980 - 9724)</span><br><strong><span style=\"color:#565051\">Query: </span></strong><span style=\"color:#565051\">Mu3.fa (8031 - 9775)</span><br><strong><span style=\"color:#565051\">Alignment: </span></strong><span style=\"color:#565051\">1745 bp</span><br><strong><span style=\"color:#565051\">Identity: </span></strong><span style=\"color:#565051\">99.89 %</span><br>",
+        "width": 2
+    }
+]
+</script>
+<script type="application/json" id="text">
+{
+    "names": [
+        {
+            "colour": "#404040",
+            "font_family": "times",
+            "font_size": "200%",
+            "font_weight": "bold",
+            "opacity": 1,
+            "text": "JKD6159",
+            "x": 0,
+            "y": 260.0
+        },
+        {
+            "colour": "#404040",
+            "font_family": "times",
+            "font_size": "200%",
+            "font_weight": "bold",
+            "opacity": 1,
+            "text": "ST93",
+            "x": 0,
+            "y": 560.0
+        },
+        {
+            "colour": "#404040",
+            "font_family": "times",
+            "font_size": "200%",
+            "font_weight": "bold",
+            "opacity": 1,
+            "text": "Mu3",
+            "x": 0,
+            "y": 860.0
+        }
+    ],
+    "title": [
+        {
+            "colour": "#404040",
+            "font_family": "times",
+            "font_size": "300%",
+            "font_weight": "bold",
+            "opacity": 1,
+            "text": "SCCmec-IV in S. aureus ST93",
+            "x": 700.0,
+            "y": 100
+        }
+    ]
+}
+</script>
+<script>
+var width = 1800;
+var height = 1200;
+var segment_scale = 1800;
+
+var blocks = JSON.parse(document.getElementById("blocks").innerHTML);
+var lines = JSON.parse(document.getElementById("lines").innerHTML);
+var chords = JSON.parse(document.getElementById("chords").innerHTML);
+var text = JSON.parse(document.getElementById("text").innerHTML);
+
+var scaleX = d3.scale.linear()
+               .domain([0, d3.max(lines, function(d){ return d.length; })])
+               .range([0, segment_scale]);
+
+
+// Main Body
+
+var chart = d3.select("body")
+            .append("svg")
+            .attr("id", "Main")
+            .attr("width", width)
+            .attr("height", height)
+            .call(d3.behavior.zoom().on("zoom", function () {
+                chart.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+            }))
+            .append("g");
+
+// Tooltip CSS
+
+var tooltip = d3.select("body").append("div")
+                               .attr("class", "tooltip")
+                               .style("opacity", 0);
+// Line Shell
+
+var lineShell = chart.append("g")
+                      //.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+                      .attr("id", "LineShell");
+
+lineShell.selectAll("line")
+         .data(lines)
+         .enter()
+         .append("line")
+         .attr("x1", function(d, i){ return scaleX(d.x1); })
+         .attr("y1", function(d, i){ return d.y1; })
+         .attr("x2", function(d, i){ return scaleX(d.x2); })
+         .attr("y2", function(d, i){ return d.y2; })
+         .attr("stroke", function(d, i){ return d.colour; })
+         .attr("stroke-width", function(d, i){ return d.width; })
+
+// Block Shell
+
+var blockShell = chart.append("g")
+                      //.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+                      .attr("id", "BlockShell");
+
+blockShell.selectAll("rect")
+          .data(blocks)
+          .enter()
+          .append("rect")
+          .attr("id", function(d,i) { return "block_"+i; })
+          .attr("x", function(d, i){ return scaleX(d.x); })
+          .attr("y", function(d, i){ return d.y; })
+          .attr("width", function(d, i){ return scaleX(d.width) })
+          .attr("height", function(d, i){ return d.height; })
+          .style("fill", function(d, i){ return d.colour; })
+          .on("mouseover", function(d){
+                                        tooltip.transition()
+                                               .duration(200)
+                                               .style("opacity", .9);
+                                        tooltip.html(d.text)
+                                               .style("left", (d3.event.pageX + 20) + "px")
+                                               .style("top", (d3.event.pageY + 10) + "px");
+                                       })
+
+          .on("mouseout", function(d) {
+                                        tooltip.transition()
+                                               .duration(200)
+                                               .style("opacity", 0)
+                                       });
+
+// Comparison Shell
+
+var comparisonShell = chart.append("g")
+                      //.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+                      .attr("id", "ComparisonShell");
+
+var lineFunction = d3.svg.line()
+                     .x(function(d) { return scaleX(d.x); })
+                     .y(function(d) { return d.y; })
+                     .interpolate("linear");
+
+comparisonShell.selectAll("path")
+          .data(chords)
+          .enter()
+          .append("path")
+           .attr("d", function(d) { return lineFunction(d.poly); } )
+           .attr("stroke", function(d) { return d.colour; })
+           .attr("stroke-width", function(d) { return d.width; })
+           .attr("fill", function(d) { return d.fill; })
+           .attr("opacity", 0.3)
+           .on("mouseover", function(){
+                                d3.select(this).transition().duration(300).style("opacity", 0.8);
+                            })
+           .on("mouseout", function(){
+                        d3.select(this).transition().duration(300).style("opacity",  0.3);
+                    })
+           .on("mousedown", function(d){
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                    tooltip.html(d.text)
+                        .style("left", (d3.event.pageX + 20) + "px")
+                        .style("top", (d3.event.pageY + 10) + "px");
+                    })
+            .on("mouseup", function(d) {
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", 0)
+                })
+
+var titleShell = chart.append("g")
+          .attr("id", "TitleShell");
+
+titleShell.selectAll("text")
+      .data(text.title)
+      .enter()
+      .append("text")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .style("text-anchor", "middle")
+      .style("font-size", function(d) { return d.font_size; })
+      .style("font-weight", function(d) { return d.font_weight; })
+      .style("font-family", function(d) { return d.font_family; })
+      .style("fill", function(d) { return d.colour; })
+      .attr("class", "title")
+      .text(function(d) { return d.text; })
+      .style("opacity", function(d) { return d.opacity; });
+
+var nameShell = chart.append("g")
+          .attr("id", "NameShell");
+
+nameShell.selectAll("text")
+      .data(text.names)
+      .enter()
+      .append("text")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .style("text-anchor", "end")
+      .style("font-size", function(d) { return d.font_size; })
+      .style("font-weight", function(d) { return d.font_weight; })
+      .style("font-family", function(d) { return d.font_family; })
+      .style("fill", function(d) { return d.colour; })
+      .attr("class", "name")
+      .text(function(d) { return d.text; })
+      .style("opacity", function(d) { return d.opacity; });
+
+
+</script>
+
+</body>
+</html>
+
