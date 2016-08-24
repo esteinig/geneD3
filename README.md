@@ -1,9 +1,6 @@
 # GeneD3
 
-<p align="center">
- <a href="http://rawgit.com/esteinig/geneD3/master/title_image.html">
- <img src="https://github.com/esteinig/geneD3/blob/master/title_image.png" border="0">
-</p>
+![http://rawgit.com/esteinig/geneD3/master/title_image.html](https://github.com/esteinig/geneD3/blob/master/title_image.png)
 
 Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
 
