@@ -1,10 +1,10 @@
 # GeneD3
 
-[![](http://rawgit.com/esteinig/geneD3/master/title_image.html)](https://github.com/esteinig/geneD3/blob/master/title_image.png)
+[![Click for interactive visualization with GeneD3](https://github.com/esteinig/geneD3/blob/master/title_image.png)](http://rawgit.com/esteinig/geneD3/master/title_image.html)
 
 Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
 
-Click the image to see an interactive example of GeneD3.
+Click the image above to see an interactive example of GeneD3.
 
 ### Usage
 ---
@@ -22,8 +22,6 @@ Click the image to see an interactive example of GeneD3.
 
 ### Installation
 ---
-
-Detailed Instructions
 
 ```
 git clone https://github.com/esteinig/geneD3.git $HOME/geneD3
