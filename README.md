@@ -10,10 +10,11 @@ Interactive sequence comparisons in D3, orchestrated with Python.
 ### Dependencies
 ---
 
-* BLAST+
-* Python 3
-* Pandas
-* BioPython
+* [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+* [Python 3](https://www.continuum.io/downloads)
+
+* [Pandas](http://pandas.pydata.org/)
+* [BioPython](http://biopython.org/wiki/Documentation)
 
 ### Installation
 ---
@@ -24,6 +25,8 @@ chmod +x $HOME/geneD3/geneD3.py
 echo "PATH=$PATH:$HOME/geneD3" >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
+
+Detailed Instructions
 
 ### Options
 ---
@@ -104,3 +107,12 @@ source $HOME/.bashrc
 --y_title   Title, Y (100)
 --x_title   Title, defaults to half of canvas width X (900)
 ```
+
+### Update
+---
+
+In the next version:
+* additional annotation and sequence formats
+* alignment of segments on canvas
+* download accessions from NCBI
+* support for prokaryotic sequence annotation with [Prokka](https://github.com/tseemann/prokka)
