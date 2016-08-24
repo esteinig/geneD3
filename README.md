@@ -14,6 +14,13 @@ Click the image above to see an interactive example of GeneD3:
 
 `geneD3.py --files Sequence1.gbk,Sequence2.gbk --names Seq1,Seq2`
 
+### Output
+---
+
+The program outputs the visualization as HTML, which you can open in Chrome or Firefox.
+
+You can use [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to download the visualization from your browser as a static vector file - works in both Chrome and Firefox!
+
 ### Dependencies
 ---
 
