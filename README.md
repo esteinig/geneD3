@@ -1,6 +1,6 @@
 # GeneD3
 
-Interactive sequence comparisons in D3, orchestrated with Python.
+Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
 
 ### Usage
 ---
@@ -19,14 +19,14 @@ Interactive sequence comparisons in D3, orchestrated with Python.
 ### Installation
 ---
 
+Instructions
+
 ```
 git clone https://github.com/esteinig/geneD3.git $HOME/geneD3
 chmod +x $HOME/geneD3/geneD3.py
 echo "PATH=$PATH:$HOME/geneD3" >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
-
-Detailed Instructions
 
 ### Options
 ---
