@@ -1,10 +1,13 @@
 # GeneD3
 
 <p align="center">
- <img src="https://github.com/esteinig/geneD3/blob/master/title_image.png">
+ <a href="http://rawgit.com/esteinig/geneD3/master/title_image.html">
+ <img src="https://github.com/esteinig/geneD3/blob/master/title_image.png" border="0">
 </p>
 
 Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
+
+Click the image to see an interactive example of GeneD3.
 
 ### Usage
 ---
