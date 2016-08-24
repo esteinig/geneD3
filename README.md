@@ -1,5 +1,9 @@
 # GeneD3
 
+<p align="center">
+ <img src="https://github.com/esteinig/geneD3/blob/master/title_image.png">
+</p>
+
 Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated with Python.
 
 ### Usage
@@ -19,7 +23,7 @@ Interactive sequence comparisons in [D3](https://github.com/d3), orchestrated wi
 ### Installation
 ---
 
-Instructions
+Detailed Instructions
 
 ```
 git clone https://github.com/esteinig/geneD3.git $HOME/geneD3
@@ -43,9 +47,9 @@ source $HOME/.bashrc
 --qualifiers      Comma-delimited list of qualifiers to parse from annotations (gene,product)
 --path            Project path (.)
 --project         Name of project (GeneD3)
---write-segments  Write segment files to project path for manual manipulation,
-                  e.g. colours or annotations (False)
---read-segments   Read segment files from project path, overrides previous
+--write_segments  Write segment files to project path for manual manipulation,
+                  e.g. colours or annotation tooltips (False)
+--read_segments   Read segment files from project path, overrides previous
                   properties of segments (False)
 ```
 
@@ -112,7 +116,8 @@ source $HOME/.bashrc
 ---
 
 In the next version:
-* additional annotation and sequence formats
 * alignment of segments on canvas
+* comparison opacity scaled by identity
+* additional annotation and sequence formats
 * download accessions from NCBI
 * support for prokaryotic sequence annotation with [Prokka](https://github.com/tseemann/prokka)
