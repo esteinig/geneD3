@@ -17,9 +17,9 @@ Click the image above to see an interactive example of GeneD3:
 ### Output
 ---
 
-The program outputs the visualization as HTML, which you can open in Chrome or Firefox.
+The program outputs the visualization as HTML, which can be opened in Chrome or Firefox.
 
-You can use [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to download the visualization from your browser as a static vector file - works in both Chrome and Firefox!
+[SVG Crowbar](http://nytimes.github.io/svg-crowbar/) can download the visualizatio as a static vector file - works in both Chrome and Firefox!
 
 ### Dependencies
 ---
@@ -124,10 +124,10 @@ source $HOME/.bashrc
 
 In the next version:
 * pip install on PyPI
-* tests and annotations
+* tests and code annotations
 * download accessions from NCBI
 * forward / reverse marker style
 * alignment of segments on canvas
-* comparison opacity scaled by identity
 * additional annotation and sequence formats
+* 
 
