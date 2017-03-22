@@ -36,7 +36,7 @@ The program outputs the visualization as HTML, which can be opened in Chrome or 
 ```
 git clone https://github.com/esteinig/geneD3.git $HOME/geneD3
 chmod +x $HOME/geneD3/geneD3.py
-echo "PATH=$PATH:$HOME/geneD3" >> $HOME/.bashrc
+echo "export PATH=$PATH:$HOME/geneD3" >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
 
